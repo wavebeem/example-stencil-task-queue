@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+
+:focus {
+  outline: 2px solid;
+  outline-offset: -4px;
+}
+
+button {
+  background: #222;
+  color: #fff;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.5rem;
+  border: 0;
+  font: inherit;
+}
+
+button:hover {
+  background: #333;
+}
+
+button:active {
+  transform: scale(0.98);
+}

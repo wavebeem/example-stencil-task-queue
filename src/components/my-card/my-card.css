@@ -1,0 +1,9 @@
+:host {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background: #fff;
+  background-clip: padding-box;
+  border: 1px solid hsl(0 0% 0% / 20%);
+  box-shadow: 0 2px 4px hsl(0 0% 0% / 10%);
+}

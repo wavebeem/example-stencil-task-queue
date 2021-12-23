@@ -8,9 +8,22 @@
   Any global CSS variables should also be applied here.
 */
 
-body {
-  margin: 0px;
-  padding: 0px;
+html {
+  background: #eee;
+  color: #222;
+  scrollbar-color: #222 #eee;
+  overflow-y: scroll;
+  font-variant-numeric: tabular-nums;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.25rem;
 }

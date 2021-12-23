@@ -5,58 +5,72 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { MatchResults } from "@stencil/router";
 export namespace Components {
-  interface AppHome {}
-  interface AppProfile {
-    match: MatchResults;
-  }
-  interface AppRoot {}
+    interface AppHome {
+    }
+    interface AppRoot {
+    }
+    interface MyButton {
+    }
+    interface MyCard {
+    }
 }
 declare global {
-  interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
-  };
-  interface HTMLAppProfileElement
-    extends Components.AppProfile,
-      HTMLStencilElement {}
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
-  };
-  interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
-  var HTMLAppRootElement: {
-    prototype: HTMLAppRootElement;
-    new (): HTMLAppRootElement;
-  };
-  interface HTMLElementTagNameMap {
-    "app-home": HTMLAppHomeElement;
-    "app-profile": HTMLAppProfileElement;
-    "app-root": HTMLAppRootElement;
-  }
+    interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
+    }
+    var HTMLAppHomeElement: {
+        prototype: HTMLAppHomeElement;
+        new (): HTMLAppHomeElement;
+    };
+    interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
+    }
+    var HTMLAppRootElement: {
+        prototype: HTMLAppRootElement;
+        new (): HTMLAppRootElement;
+    };
+    interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
+    }
+    var HTMLMyButtonElement: {
+        prototype: HTMLMyButtonElement;
+        new (): HTMLMyButtonElement;
+    };
+    interface HTMLMyCardElement extends Components.MyCard, HTMLStencilElement {
+    }
+    var HTMLMyCardElement: {
+        prototype: HTMLMyCardElement;
+        new (): HTMLMyCardElement;
+    };
+    interface HTMLElementTagNameMap {
+        "app-home": HTMLAppHomeElement;
+        "app-root": HTMLAppRootElement;
+        "my-button": HTMLMyButtonElement;
+        "my-card": HTMLMyCardElement;
+    }
 }
 declare namespace LocalJSX {
-  interface AppHome {}
-  interface AppProfile {
-    match?: MatchResults;
-  }
-  interface AppRoot {}
-  interface IntrinsicElements {
-    "app-home": AppHome;
-    "app-profile": AppProfile;
-    "app-root": AppRoot;
-  }
+    interface AppHome {
+    }
+    interface AppRoot {
+    }
+    interface MyButton {
+    }
+    interface MyCard {
+    }
+    interface IntrinsicElements {
+        "app-home": AppHome;
+        "app-root": AppRoot;
+        "my-button": MyButton;
+        "my-card": MyCard;
+    }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
-  export namespace JSX {
-    interface IntrinsicElements {
-      "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
-      "app-profile": LocalJSX.AppProfile &
-        JSXBase.HTMLAttributes<HTMLAppProfileElement>;
-      "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+    export namespace JSX {
+        interface IntrinsicElements {
+            "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
+            "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
+            "my-card": LocalJSX.MyCard & JSXBase.HTMLAttributes<HTMLMyCardElement>;
+        }
     }
-  }
 }
