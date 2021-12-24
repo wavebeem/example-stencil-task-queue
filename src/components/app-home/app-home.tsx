@@ -32,17 +32,15 @@ export class AppHome {
         <div class="grid">
           {items.map((item) => {
             return (
-              <div key={item.id}>
-                <h2>{item.title}</h2>
-                <my-card>
-                  <div class="flex">
+              <my-card key={item.id}>
+                <div class="flex">
+                  <div>
+                    <h2>{item.title}</h2>
                     <p>{item.description}</p>
-                    <my-button aria-label={`Edit ${item.title}`}>
-                      Edit
-                    </my-button>
                   </div>
-                </my-card>
-              </div>
+                  <my-button aria-label={`Edit ${item.title}`}>Edit</my-button>
+                </div>
+              </my-card>
             );
           })}
         </div>
