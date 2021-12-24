@@ -1,4 +1,4 @@
-import { Component, Fragment, h, Host, State } from "@stencil/core";
+import { Component, h, Host, State } from "@stencil/core";
 
 @Component({
   tag: "app-home",
@@ -9,7 +9,7 @@ export class AppHome {
   @State() page = 0;
 
   render() {
-    const items = getItems({ pageSize: 10, page: this.page });
+    const items = getItems({ pageSize: 4, page: this.page });
     return (
       <Host>
         <div class="flex">
@@ -32,9 +32,9 @@ export class AppHome {
         <div class="grid">
           {items.map((item) => {
             return (
-              <Fragment>
+              <div key={item.id}>
                 <h2>{item.title}</h2>
-                <my-card key={item.id}>
+                <my-card>
                   <div class="flex">
                     <p>{item.description}</p>
                     <my-button aria-label={`Edit ${item.title}`}>
@@ -42,7 +42,7 @@ export class AppHome {
                     </my-button>
                   </div>
                 </my-card>
-              </Fragment>
+              </div>
             );
           })}
         </div>

@@ -7,6 +7,9 @@ export const config: Config = {
   globalScript: "src/global/app.ts",
   taskQueue: "async",
   sourceMap: true,
+  extras: {
+    initializeNextTick: false,
+  },
   outputTargets: [
     {
       type: "www",
